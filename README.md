@@ -1,4 +1,4 @@
-# Custom-css
+# Modern design theme
 A custom css file for betterdiscord client
 # Features
 - Blur
