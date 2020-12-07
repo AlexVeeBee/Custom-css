@@ -1,8 +1,10 @@
+
+/**/
 body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-/*Main-window
+/*Main-window*
 .winButton-iRh8-Z{
     cursor: default;
     transition: 0.1s;
@@ -63,6 +65,26 @@ html.theme-light #app-mount::after {
     --home-Chat-border-width: 2px;
     --home-Chat-border-type: solid;
     --home-Chat-border-color: var(--background-primary);
+}
+/*Vars
+:root{
+    
+}*/
+.theme-dark{
+    --custom-background-1: rgba(0, 0, 0, 0.6);
+    --custom-background-secondary: rgba(47, 49, 54, 0.3);
+    --custom-background-secondary-alt: rgba(41, 43, 47, 0.3);
+
+    --custom-backdrop-filter-range-1: blur(6px);
+    --custom-backdrop-filter-range-2: blur(14px);
+}
+.theme-light{
+    --custom-background-1: rgba(255, 255, 255, 0.6);
+    --custom-background-secondary: rgba(242, 243, 245 ,0.3);
+    --custom-background-secondary-alt: rgba(235, 237, 239 ,0.3);
+
+    --custom-backdrop-filter-range-1: blur(2px);
+    --custom-backdrop-filter-range-2: blur(6px);
 }
 .wrapper-1Rf91z{
     /*border-radius: var( --border-radius-item);
@@ -126,13 +148,11 @@ html.theme-light #app-mount::after {
     background-color: rgba(0,0,0,0.5);
 }
 .wrapper-35wsBm{
-    background-color: rgba(25,25,25,0.5);
+    background-color: var(--custom-background-secondary-alt);
     box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.6);
 }
 /*Login / Themes*/
-.image-2jyRAK{
-    visibility: visible;
-}
+
 .rightSplit-2US0xy{
     backdrop-filter: blur(0px);
     background-color: rgba(0, 0, 0, 0);
@@ -152,6 +172,9 @@ html.theme-light #app-mount::after {
     backdrop-filter: blur(20px);
 }
 /*Home / Frinds*/
+.peopleListItem-2nzedh{
+    border-top: none;
+}
 .peopleListItem-2nzedh.active-rhSpJJ, .peopleListItem-2nzedh:hover{
     backdrop-filter: blur(8px);
     border:
@@ -175,6 +198,14 @@ html.theme-light #app-mount::after {
 }
 .theme-dark .selected-aXhQR6 .layout-2DM8Md{
     background: linear-gradient(90deg, rgba(155, 32, 118, 0.308) 0% , rgba(72, 103, 155, 0.267) 100%);
+}
+/*Home / Frinds / activity*/
+.emptyCard-1RJw8n{
+    background-color: var(--custom-background-secondary);
+}
+.theme-dark .popout-38lTFE{
+    background: rgba(0, 0, 0, 0.287);
+    backdrop-filter: var(--custom-backdrop-filter-range-1);
 }
 /*Home / Dms / Search*/
 .searchBar-6Kv8R2{
@@ -231,6 +262,10 @@ html.theme-light #app-mount::after {
 }*/
 .root-217Brm{
     background-color: rgba(0, 0, 0, 0.6);
+    background-image: url('https://i.imgur.com/MGfnfgh.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 /* Chat - timeline date/time */
 :root{
@@ -281,6 +316,19 @@ html.theme-light #app-mount::after {
     position: relative;
     height: min-content;
     transform: translate(0%,50%);
+}
+/*Call , VC / themes*/
+.background-ujHpbY{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.tile-2naSqK{
+    --custom-background-color: rgba(0, 0, 0, 0.568);
+    background-color: var(--custom-background-color);
+    backdrop-filter: blur(24px);
+    box-shadow: 0px 2px 5px 0px var(--custom-background-color);
+}
+.wrapper-3BZGuR.ringing-1VKjFq{
+    opacity: 1;
 }
 /**/
 .channelTextArea-2VhZ6z{
@@ -384,7 +432,9 @@ html.theme-light #app-mount::after {
 .tabBarContainer-1s1u-z{
     border-top: none;
 }
-
+.topSectionXbox-3fWLjS{
+    background: rgba(16, 124, 16, 0.123);
+}
 
 /*join or create server / Theme
 
@@ -443,26 +493,6 @@ html.theme-light #app-mount::after {
 .standardSidebarView-3F1I7i{
     background-color: rgba(var(--custom-dark-theme),0.0);
 }*/
-/*Vars
-:root{
-    
-}*/
-.theme-dark{
-    --custom-background-1: rgba(0, 0, 0, 0.6);
-    --custom-background-secondary: rgba(47, 49, 54, 0.3);
-    --custom-background-secondary-alt: rgba(41, 43, 47, 0.3);
-
-    --custom-backdrop-filter-range-1: blur(6px);
-    --custom-backdrop-filter-range-2: blur(14px);
-}
-.theme-light{
-    --custom-background-1: rgba(255, 255, 255, 0.6);
-    --custom-background-secondary: rgba(242, 243, 245 ,0.3);
-    --custom-background-secondary-alt: rgba(235, 237, 239 ,0.3);
-
-    --custom-backdrop-filter-range-1: blur(2px);
-    --custom-backdrop-filter-range-2: blur(6px);
-}
 /*User / Theme*/
 .lookFilled-1Gx00P.colorGreen-29iAKY{
     background-color: rgba(0,0,0,0);
@@ -557,7 +587,7 @@ html.theme-light #app-mount::after {
 .fullscreenOnMobile-1bD22y{
     background-color: var(--custom-background-secondary);
 }
-/*Settings / nav / theme*/
+/*Settings / nav / theme
 :root{
     --custom-background-color-settings-nav: var(--custom-background-1);
     --custom-border-top-bottom-right-radius-settings-nav: 12px;
@@ -582,9 +612,27 @@ html.theme-light #app-mount::after {
 }
 .theme-light .themed-OHr7kt.item-PXvHYJ{
     color: black;
-}
+}*/
     /*:root{
     --background-tertiary: rgba(0,0,0,0);
     --background-secondary: rgba(0,0,0,0);
     --background-primary: rgba(0,0,0,0);
 }*/
+
+/*Plugins / premissions*/
+#permissions-modal-wrapper #permissions-modal{
+    backdrop-filter: var(--custom-backdrop-filter-range-2);
+}
+#permissions-modal-wrapper .header{
+    background-color: var(--custom-background-secondary) !important;
+    box-shadow: none !important;
+}
+#permissions-modal-wrapper .modal-body{
+    background-color: var(--custom-background-secondary) !important;
+}
+#permissions-modal-wrapper .role-side{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+#permissions-modal-wrapper .perm-side{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
