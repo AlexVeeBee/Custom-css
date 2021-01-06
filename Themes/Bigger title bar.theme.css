@@ -1,0 +1,22 @@
+/**
+ * @name Bigger title bar
+ * @author AlexVeeBee#4821
+ * @version 1.0.0
+ * @description Bigger title bar
+*/
+
+.winButton-iRh8-Z{
+    cursor: default;
+    transition: 0.1s;
+    width: 50px !important;
+    height: 30px !important;
+}
+.typeWindows-1za-n7{
+    height: 30px !important;
+    position: relative;
+}
+.wordmarkWindows-1v0lYD{
+    top: calc(50% - 2px) !important;
+    transform: translate(10px,-50%) !important;
+}
+

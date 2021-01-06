@@ -1,0 +1,169 @@
+/**
+ * @name SidebarStatus
+ * @author Tropical#8908
+ * @version 1.0.0
+ * @description Redesigned status picker
+ * @invite TeRQEPb 
+ * @authorId 254362351170617345
+*/
+
+/*Variables*/
+
+:root {
+    --guilds-width:72px;
+    --titlebar-height:22px;
+	--sidebar-width:240px;
+	--profile-card-color:var(--background-secondary-alt);
+	--controls-color:var(--background-tertiary);
+}
+
+/*Keyframes*/
+
+@keyframes sidebarStatusTransalteX {
+    0% {
+        transform:translateX(-15%);
+    }
+    100% {
+        transform:none;
+    }
+}
+@keyframes sidebarStatusFadeIn {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+/*Positioning and styling for the main container*/
+
+.menu-Sp6bN1[role="listbox"] {
+    position:fixed;
+    top: var(--titlebar-height);
+    left:0;
+    width:calc(var(--sidebar-width) + var(--guilds-width));
+    height:calc(100vh - var(--titlebar-height) - 58px);
+    animation:sidebarStatusTransalteX .5s ease;
+    padding:0;
+    border-radius:0;
+    padding-top:168px;
+}
+
+/*Inner container (menu items, dividers, etc)*/
+
+.menu-Sp6bN1[role="listbox"] .separator-2zcjq8 {
+	display:none;
+}
+
+.menu-Sp6bN1[role="listbox"] .itemBase-1Qj4z6 {
+    margin:0;
+    padding:0 16px;
+    min-height:64px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size:14px;
+    font-weight:600;
+}
+
+.menu-Sp6bN1[role="listbox"] .helper-2c73HK {
+    font-size:12px;
+    font-weight:500;
+}
+
+.menu-Sp6bN1[role="listbox"] .menuItem-2e3xQl {
+    flex-direction:row;
+    justify-content:flex-start;
+}
+
+.menu-Sp6bN1[role="listbox"] .status-3Kz6VS,
+.menu-Sp6bN1[role="listbox"] .customStatusEmojiPlaceholder-1NdyxH{
+    width:18px;
+    height:18px;
+    margin-right:16px;
+}
+
+.menu-Sp6bN1[role="listbox"] .customStatusContentIcon-2sionu {
+    margin:0;
+}
+
+.menu-Sp6bN1[role="listbox"] .helper-2c73HK {
+    margin:0;
+    margin-left:34px;
+}
+
+/*Contained within .container-3baos1*/
+
+.avatarWrapper-2yR4wp[aria-expanded="true"] {
+	position:fixed;
+	top:6px;
+	left:0;
+	z-index:1003;
+	width:calc(var(--sidebar-width) + var(--guilds-width) - 32px);
+	display:flex;
+	justify-content:center;
+	animation:sidebarStatusTransalteX .5s ease, sidebarStatusFadeIn .75s ease;
+	background:var(--profile-card-color);
+	box-shadow:var(--elevation-low);
+	box-sizing:border-box;
+	border-radius:5px;
+	margin:32px 16px;
+	padding:12px;
+	height:136px;
+}
+
+.avatarWrapper-2yR4wp[aria-expanded="true"] .wrapper-3t9DeA {
+	width:64px !important;
+	height:64px !important;
+}
+
+.avatarWrapper-2yR4wp[aria-expanded="true"] ~ .nameTag-3uD-yy {
+	position:fixed;
+	z-index:1003;
+	top:36px;
+	width:calc(var(--sidebar-width) + var(--guilds-width) - 32px);
+	animation:sidebarStatusTransalteX .5s ease, sidebarStatusFadeIn .75s ease;
+	left:0;
+	margin:0 16px;
+	text-align:center;
+	margin-top:88px;
+}
+
+.avatarWrapper-2yR4wp[aria-expanded="true"] ~ .nameTag-3uD-yy .usernameContainer-1fp4nu {
+	justify-content:center;
+	font-size:18px;
+	font-weight:600;
+	margin-bottom:4px;
+}
+
+.avatarWrapper-2yR4wp[aria-expanded="true"] ~ .nameTag-3uD-yy .usernameContainer-1fp4nu .title-eS5yk3 {
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+.avatarWrapper-2yR4wp[aria-expanded="true"] ~ .flex-1xMQg5 {
+	position:fixed;
+	z-index:1003;
+	bottom:0;
+	left:0;
+	padding:0 16px;
+	height:58px;
+	align-items:center;
+	width:calc(var(--sidebar-width) + var(--guilds-width) - 32px);
+	animation:sidebarStatusTransalteX .5s ease, sidebarStatusFadeIn .75s ease;
+	justify-content:flex-end;
+}
+
+/*Psuedo-element to add a backdrop without clipping off tooltips*/
+
+.menu-Sp6bN1[role="listbox"]::after {
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:58px;
+	bottom:-58px;
+	left:0;
+	background:var(--controls-color);
+}
